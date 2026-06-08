@@ -7,7 +7,7 @@ A rigorous, structural portfolio detailing core mechanics, low-level memory layo
 ## 📊 Complete Syllabus & Progress Metric
 
 ### 📂 01. C++ Basics
-- [ ] **Input / Output & Basic Syntax** (`cin`, `cout`, streams vs `scanf`/`printf`, `endl` vs `\n`)
+- [x] **Input / Output & Basic Syntax** (`cin`, `cout`, streams vs `scanf`/`printf`, `endl` vs `\n`)
 - [ ] **References & Functions** (References vs pointers, function overloading, default arguments)
 - [ ] **Memory Management** (`new` & `delete`, stack vs heap lifetime allocation, `const` safety)
 - [ ] **Modern Essentials** (Range-based for loops, type-safe `nullptr`, `static_cast`/`dynamic_cast`)
