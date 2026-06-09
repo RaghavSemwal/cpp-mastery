@@ -4,10 +4,11 @@
 //   int a=14;
 //   float pi=3.14;
 //     char c='A';
+// bool isTrue=true;
 //     cout<<"The value of a is "<<a<<endl;
 //     cout<<"The value of pi is "<<pi<<endl;
 //     cout<<"The value of c is "<<c<<endl;
-   
+ //     cout<<"The value of isTrue is "<<isTrue<<endl;  
     
 //     return 0;
 // }
