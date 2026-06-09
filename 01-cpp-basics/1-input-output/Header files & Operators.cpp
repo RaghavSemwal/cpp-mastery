@@ -53,10 +53,20 @@ int main() {
 
     // 6. Increment/Decrement Operators
     cout << "\nIncrement/Decrement Operators:" << endl;
-    cout << "++a = " << (++a) << endl;
-    cout << "b++ = " << (b++) << " (after increment b = " << b << ")" << endl;
-    cout << "--a = " << (--a) << endl;
-    cout << "b-- = " << (b--) << " (after decrement b = " << b << ")" << endl;
+   ++a;
+cout << "++a = " << a << endl;
+
+cout << "b++ = " << b << endl;
+b++;
+cout << "After increment b = " << b << endl;
+
+--a;
+cout << "--a = " << a << endl;
+
+cout << "b-- = " << b << endl;
+b--;
+cout << "After decrement b = " << b << endl;
+
 
     
 
