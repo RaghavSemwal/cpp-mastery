@@ -27,7 +27,6 @@ Accessible from anywhere
 
 Used to provide controlled access to private data
 */
-
 #include <iostream>
 using namespace std;
 

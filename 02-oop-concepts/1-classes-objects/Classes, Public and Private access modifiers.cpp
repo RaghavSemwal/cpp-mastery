@@ -72,34 +72,4 @@ class employee {
 
 
 
-    #include <iostream>
-using namespace std;
-
-class Student {
-private:
-    int roll;        // private data
-    float marks;
-
-public:
-    // Setter function (public)
-    void setData(int r, float m) {
-        roll = r;
-        marks = m;
-    }
-
-    // Getter function (public)
-    void display() {
-        cout << "Roll Number: " << roll << endl;
-        cout << "Marks: " << marks << endl;
-    }
-};
-
-int main() {
-    Student s1;
-
-    // s1.roll = 10;  // ❌ ERROR: roll is private
-    s1.setData(10, 92.5);  // ✔ allowed
-    s1.display();
-
-    return 0;
-}
+  
