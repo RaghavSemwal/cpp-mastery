@@ -9,92 +9,92 @@ By pointer (address of object)*/
 
 //Example: Passing Object to a Function
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// class Employee {
-// private:
-//     int id;
-//     float salary;
+class Employee {
+private:
+    int id;
+    float salary;
 
-// public:
-//     void setData(int i, float s) {
-//         id = i;
-//         salary = s;
-//     }
+public:
+    void setData(int i, float s) {
+        id = i;
+        salary = s;
+    }
 
-//     void display() {
-//         cout << "ID: " << id << ", Salary: " << salary << endl;
-//     }
-// };
+    void display() {
+        cout << "ID: " << id << ", Salary: " << salary << endl;
+    }
+};
 
-// // Function to print employee details (object passed as argument)
-// void show(Employee e) {
-//     cout << "Showing from function: ";
-//     e.display();
-// }
+// Function to print employee details (object passed as argument)
+void show(Employee e) {
+    cout << "Showing from function: ";
+    e.display();
+}
 
-// int main() {
-//     Employee emp[3];   // array of 3 objects
+int main() {
+    Employee emp[3];   // array of 3 objects
 
-//     emp[0].setData(101, 50000);
-//     emp[1].setData(102, 55000);
-//     emp[2].setData(103, 60000);
+    emp[0].setData(101, 50000);
+    emp[1].setData(102, 55000);
+    emp[2].setData(103, 60000);
 
-//     for (int i = 0; i < 3; i++) {
-//         emp[i].display();   // calling member function
-//         show(emp[i]);       // passing object to function
-//     }
+    for (int i = 0; i < 3; i++) {
+        emp[i].display();   // calling member function
+        show(emp[i]);       // passing object to function
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
 
-// //passing Object by Reference (Example)
-// #include <iostream>
-// using namespace std;
+//passing Object by Reference (Example)
+#include <iostream>
+using namespace std;
 
-// class Employee {
-// private:
-//     int id;
-//     float salary;
+class Employee {
+private:
+    int id;
+    float salary;
 
-// public:
-//     void setData(int i, float s) {
-//         id = i;
-//         salary = s;
-//     }
+public:
+    void setData(int i, float s) {
+        id = i;
+        salary = s;
+    }
 
-//     void display() {
-//         cout << "ID: " << id << ", Salary: " << salary << endl;
-//     }
+    void display() {
+        cout << "ID: " << id << ", Salary: " << salary << endl;
+    }
 
-//     // A helper to update salary
-//     void updateSalary(float s) {
-//         salary = s;
-//     }
-// };
+    // A helper to update salary
+    void updateSalary(float s) {
+        salary = s;
+    }
+};
 
-// // Function that receives object BY REFERENCE
-// void update(Employee &e) {
-//     cout << "Updating salary inside function..." << endl;
-//     e.updateSalary(99999);   // modifies original object
-// }
+// Function that receives object BY REFERENCE
+void update(Employee &e) {
+    cout << "Updating salary inside function..." << endl;
+    e.updateSalary(99999);   // modifies original object
+}
 
-// int main() {
-//     Employee e1;
+int main() {
+    Employee e1;
 
-//     e1.setData(101, 50000);
-//     cout << "Before update: ";
-//     e1.display();
+    e1.setData(101, 50000);
+    cout << "Before update: ";
+    e1.display();
 
-//     update(e1);   // passing object by reference
+    update(e1);   // passing object by reference
 
-//     cout << "After update: ";
-//     e1.display();
+    cout << "After update: ";
+    e1.display();
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 /*Why This Is Important
@@ -133,11 +133,9 @@ public:
     }
 
     // Function to add two complex numbers
-    Complex add(Complex c) {
-        Complex temp;
-        temp.real = real + c.real;
-        temp.imag = imag + c.imag;
-        return temp;
+    void add(Complex c1, Complex c2) {
+        real = c1.real + c2.real;
+        imag = c1.imag + c2.imag;
     }
 };
 
@@ -153,7 +151,7 @@ int main() {
     cout << "Second Complex Number: ";
     c2.display();
 
-    c3 = c1.add(c2);   // passing object as argument
+    c3.add(c1,c2);   // passing object as argument
 
     cout << "Sum = ";
     c3.display();
