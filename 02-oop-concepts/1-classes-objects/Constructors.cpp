@@ -31,7 +31,7 @@ public:
     VideoGame() {
         title = "Unknown Game";
         releaseYear = 2026;
-        //std::cout << "Default Constructor Called! Object initialized." << std::endl;
+        std::cout << "Default Constructor Called! Object initialized." << std::endl;
     }
 };
 
@@ -45,3 +45,21 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+/*⭐ Final Execution Flow
+1️⃣ Print: Creating game1...  
+2️⃣ Constructor runs automatically → prints:
+Default Constructor Called! Object initialized.  
+3️⃣ Print object values
+
+That’s why the constructor message appears before the game title and year.
+
+
+
+⭐ One-Line Explanation (Exam‑Ready)
+The constructor runs immediately when the object game1 is created, so its
+ message appears before any other output related to that object.*/
