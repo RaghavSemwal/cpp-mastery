@@ -35,118 +35,118 @@ Initializes objects with given values
 
 
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// class complex{
-//     private:
-//       int real;
-//       int img;
-//     public:
-//         complex(int r,int i);  // Parameterized Constructor declaration
-//            //OR 
-//            //complex(int r,int i){
-//            //real=r;
-//            //img=i;
-//            //} // Parameterized Constructor definition
-//             void display(){
-//                 cout<<"complex: "<<real<<" + "<<img<<"i"<<endl;
-//             }
-// };
+class complex{
+    private:
+      int real;
+      int img;
+    public:
+        complex(int r,int i);  // Parameterized Constructor declaration
+           //OR 
+           //complex(int r,int i){
+           //real=r;
+           //img=i;
+           //} // Parameterized Constructor definition
+            void display(){
+                cout<<"complex: "<<real<<" + "<<img<<"i"<<endl;
+            }
+};
 
-// // Parameterized Constructor definition outside the class BUT ALSO CAN BE DEFINED INSIDE THE CLASS
-// complex::complex(int r,int i){  //Parameterized Constructor
-//     real=r;
-//     img=i;}
+// Parameterized Constructor definition outside the class BUT ALSO CAN BE DEFINED INSIDE THE CLASS
+complex::complex(int r,int i){  //Parameterized Constructor
+    real=r;
+    img=i;}
 
-//  int main(){
-//     complex c1(3,4);  // constructor is called automatically
-//     c1.display();
+ int main(){
+    complex c1(3,4);  // constructor is called automatically
+    c1.display();
 
-//     return 0;
-// }
-
-
+    return 0;
+}
 
 
 
-// TAKING TWO POINT AND CALCULATING DISTANCE BETWEEN THEM
-// #include <iostream>
-// #include <math.h>
-// #include <cmath>
-// using namespace std;
 
 
-// class point {
-//     private:
-//        int x;
-//        int y;
-//     public:
-//         point(int a,int b){
-//             x=a;
-//             y=b;
-//         }
-//         void display(){
-//             cout<<"point: ("<<x<<","<<y<<")"<<endl;
-//         }
+//TAKING TWO POINT AND CALCULATING DISTANCE BETWEEN THEM
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+
+class point {
+    private:
+       int x;
+       int y;
+    public:
+        point(int a,int b){
+            x=a;
+            y=b;
+        }
+        void display(){
+            cout<<"point: ("<<x<<","<<y<<")"<<endl;
+        }
     
-//         void distance(point p,point q){
-//             double dist=sqrt(pow((q.x-p.x),2)+pow((q.y-p.y),2));
-//             cout<<"Distance between points: "<<dist<<endl;
-//         }
+        void distance(point p,point q){
+            double dist=sqrt(pow((q.x-p.x),2)+pow((q.y-p.y),2));
+            cout<<"Distance between points: "<<dist<<endl;
+        }
 
-// };
-// int main(){
+};
+int main(){
 
-//     point p1(3,4);  // constructor is called automatically
-//     p1.display();
+    point p1(3,4);  // constructor is called automatically
+    p1.display();
  
-//     point p2(7,1);  // constructor is called automatically
-//     p2.display();
+    point p2(7,1);  // constructor is called automatically
+    p2.display();
 
-//     p1.distance(p1,p2);
-//     return 0;
-// };
+    //p1.distance(p1,p2);
+    return 0;
+};
 
 //                              //or
-//  #include <iostream>
-// #include <math.h>
-// #include <cmath>
-// using namespace std;
+ #include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
 
 
-// class point {
-//     private:
-//        int x;
-//        int y;
-//     public:
-//         point(int a,int b){
-//             x=a;
-//             y=b;
-//         }
-//         void display(){
-//             cout<<"point: ("<<x<<","<<y<<")"<<endl;
-//         }
+class point {
+    private:
+       int x;
+       int y;
+    public:
+        point(int a,int b){
+            x=a;
+            y=b;
+        }
+        void display(){
+            cout<<"point: ("<<x<<","<<y<<")"<<endl;
+        }
     
-//        friend void distance(point p,point q);
+       friend void distance(point p,point q);
 
-// };
-//         void distance(point p,point q){
-//             double dist=sqrt(pow((q.x-p.x),2)+pow((q.y-p.y),2));
-//             cout<<"Distance between points: "<<dist<<endl;
-//         }
+};
+        void distance(point p,point q){
+            double dist=sqrt(pow((q.x-p.x),2)+pow((q.y-p.y),2));
+            cout<<"Distance between points: "<<dist<<endl;
+        }
  
-// int main(){
+int main(){
 
-//     point p1(3,4);  // constructor is called automatically
-//     p1.display();
+    point p1(3,4);  // constructor is called automatically
+    p1.display();
  
-//     point p2(7,1);  // constructor is called automatically
-//     p2.display();
+    point p2(7,1);  // constructor is called automatically
+    p2.display();
 
-//     distance(p1,p2);
-//     return 0;
-// };
+    distance(p1,p2);
+    return 0;
+};
 
 
 
