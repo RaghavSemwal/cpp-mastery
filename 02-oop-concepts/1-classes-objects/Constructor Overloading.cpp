@@ -1,3 +1,12 @@
+/*⭐ Constructor Overloading
+🎯 Definition
+Constructor overloading means having multiple constructors in the same class, each with different parameter lists.
+This allows objects to be initialized in different ways.
+
+*/
+
+
+
 #include <iostream>
 using namespace std;
 
@@ -44,3 +53,18 @@ int main() {
 
     return 0;
 }
+
+
+
+/*
+⭐ Exam‑Ready One‑Liners
+Constructors can be overloaded just like functions.
+
+Overloading is based on number or type of parameters.
+
+Helps in flexible initialization of objects.
+
+Return type is not allowed for constructors.
+
+Copy constructor is also a form of constructor overloading.
+*/
