@@ -1,4 +1,4 @@
-/*⭐ Destructor in C++
+/* ⭐ Destructor in C++
 🎯 Definition
 A destructor is a special member function of a class that:
 
@@ -53,3 +53,29 @@ int main() {
     // destructors will be called automatically at end of scope
     return 0;
 }
+
+
+/*
+⭐ Key Points (Exam‑Ready)
+Destructor is called automatically when object goes out of scope.
+
+Only one destructor per class (cannot be overloaded).
+
+Useful for freeing memory or closing files.
+
+Syntax: ~ClassName()
+
+Order: Constructors run when object is created → Destructor runs when object is destroyed.
+
+
+
+⭐ One‑Line Definition
+A destructor is a special member function that cleans up when an object is destroyed,
+ automatically called at the end of its lifetime.
+
+ */
+
+
+
+
+ 
