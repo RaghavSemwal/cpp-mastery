@@ -87,7 +87,7 @@ public:
 };
 
 void derived :: process(){
-  // setdata();
+   setdata();
     data3=data2*getdata1();
 }
 
@@ -104,3 +104,84 @@ int main(){
     der.display();
     return 0;
 }
+
+
+
+
+
+
+
+
+/* What is Single Inheritance?
+Definition: A derived class inherits from exactly one base class.
+
+Purpose: Promotes code reusability and allows extension of base class functionality. */
+
+
+
+#include <iostream>
+using namespace std;
+
+class Employee {
+public:
+    int id;
+    float salary;
+
+    Employee(int i) {
+        id = i;
+        salary = 50000; // default salary
+    }
+
+    void showEmployee() {
+        cout << "Employee ID: " << id << ", Salary: " << salary << endl;
+    }
+};
+
+class Programmer : public Employee {
+private:
+    string language;
+
+public:
+    // Constructor chaining: call Employee constructor
+    Programmer(int i, string lang) : Employee(i) {
+        language = lang;
+    }
+
+    void showProgrammer() {
+        cout << "Programmer ID: " << id
+             << ", Salary: " << salary
+             << ", Language: " << language << endl;
+    }
+};
+
+int main() {
+    Programmer p1(101, "C++");
+    p1.showEmployee();    // inherited function
+    p1.showProgrammer();  // derived function
+    return 0;
+}
+
+
+
+
+
+
+
+
+/*   Key Points (Exam‑Ready)
+Single inheritance → one base, one derived.
+
+Derived class inherits public & protected members (depending on visibility mode).
+
+Private members of base are never inherited directly.
+
+Base class constructor runs first, then derived class constructor.
+
+Supports function overriding (derived class can redefine base functions).
+
+Advantages
+Simple and easy to understand.
+
+Promotes code reuse.
+
+Forms the foundation for more complex inheritance types (multilevel, multiple, hybrid).*/
