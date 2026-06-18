@@ -28,7 +28,7 @@ public:
         cout << "Value (accessible in derived): " << value << endl;
     }
 };
-
+ 
 int main() {
     Derived d(42);
     d.show();        // ✔ works
