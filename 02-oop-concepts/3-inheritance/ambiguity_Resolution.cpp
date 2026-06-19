@@ -111,3 +111,13 @@ int main() {
     obj.B::show();   // ✔ resolves ambiguity
     return 0;
 }
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Technique                                | How It Works                                                   | Example                                 |
+|---------------------------------------   |-----------------------------------------------------------------|----------------------------------------|
+| **Scope Resolution Operator (::)**       | Explicitly specify which base class’s member to call           | obj.A::show();                          |
+| **Virtual Inheritance**                  | Used in **diamond problem** to ensure only one copy of base class is inherited | class B : virtual public A { };|
+| **Function Overriding in Derived Class** | Redefine the function in derived class to remove ambiguity     | void show() { cout << "Derived show()"; } |
+*/
