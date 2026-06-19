@@ -1,7 +1,7 @@
 //⭐ Case 1: Single Inheritance
 
-//#include <iostream>
-//using namespace std;
+#include <iostream>
+using namespace std;
 
 /*
 Case1:
@@ -10,60 +10,60 @@ class B: public A {
 };
 */
 
-// class A {
-// public:
-//     A() { cout << "Constructor of A\n"; }
-// };
+class A {
+public:
+    A() { cout << "Constructor of A\n"; }
+};
 
-// class B : public A {
-// public:
-//     B() { cout << "Constructor of B\n"; }
-// };
+class B : public A {
+public:
+    B() { cout << "Constructor of B\n"; }
+};
 
-// int main() {
-//     B obj;  // Output: A then B
-//     return 0;
-// }
+int main() {
+    B obj;  // Output: A then B
+    return 0;
+}
 
 
 
 
 //⭐ Case 2: Multiple Inheritance
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// /*
-// Case2:
-// class A: public B, public C {
-//     // Order of execution of constructor -> B() then C() and finally A()
-// };
-// */
+/*
+Case2:
+class A: public B, public C {
+    // Order of execution of constructor -> B() then C() and finally A()
+};
+*/
 
-// class B {
-// public:
-//     B() { cout << "Constructor of B\n"; }
-// };
+class B {
+public:
+    B() { cout << "Constructor of B\n"; }
+};
 
-// class C {
-// public:
-//     C() { cout << "Constructor of C\n"; }
-// };
+class C {
+public:
+    C() { cout << "Constructor of C\n"; }
+};
 
-// class A : public B, public C {
-// public:
-//     A() { cout << "Constructor of A\n"; }
-// };
+class A : public B, public C {
+public:
+    A() { cout << "Constructor of A\n"; }
+};
 
-// int main() {
-//     A obj;  // Output: B then C then A
-//     return 0;
-// }
+int main() {
+    A obj;  // Output: B then C then A
+    return 0;
+}
 
 
 
 //⭐ Case 3: Virtual Base Class
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
 /*
 Case3:
@@ -72,25 +72,25 @@ class A: public B, virtual public C {
 };
 */
 
-// class C {
-// public:
-//     C() { cout << "Constructor of C (virtual base)\n"; }
-// };
+class C {
+public:
+    C() { cout << "Constructor of C (virtual base)\n"; }
+};
 
-// class B {
-// public:
-//     B() { cout << "Constructor of B\n"; }
-// };
+class B {
+public:
+    B() { cout << "Constructor of B\n"; }
+};
 
-// class A : public B, virtual public C {
-// public:
-//     A() { cout << "Constructor of A\n"; }
-// };
+class A : public B, virtual public C {
+public:
+    A() { cout << "Constructor of A\n"; }
+};
 
-// int main() {
-//     A obj;  // Output: C then B then A
-//     return 0;
-// }
+int main() {
+    A obj;  // Output: C then B then A
+    return 0;
+}
 
 
 
@@ -129,3 +129,13 @@ int main() {
     Derived obj(10, 20, 30, 40);
     return 0;
 }
+
+/*🎯 Summary
+Single inheritance → Base then Derived.
+
+Multiple inheritance → Constructors run in order of declaration.
+
+Virtual base classes → Constructed first, then non‑virtual bases, then derived.
+
+Special syntax → Derived constructor passes arguments to multiple base constructors via initializer list*/
+
