@@ -50,43 +50,43 @@ int main() {
 
 
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// class Employee {
-// public:
-//     int id;
-//     Employee(int i) { id = i; }
-//     void showEmployee() { cout << "Employee ID: " << id << endl; }
-// };
+class Employee {
+public:
+    int id;
+    Employee(int i) { id = i; }
+    void showEmployee() { cout << "Employee ID: " << id << endl; }
+};
 
-// class Coder {
-// public:
-//     string language;
-//     Coder(string lang) { language = lang; }
-//     void showCoder() { cout << "Coding Language: " << language << endl; }
-// };
+class Coder {
+public:
+    string language;
+    Coder(string lang) { language = lang; }
+    void showCoder() { cout << "Coding Language: " << language << endl; }
+};
 
-// class Programmer : public Employee, public Coder {
-// public:
-//     float salary;
-//     Programmer(int i, string lang, float s) : Employee(i), Coder(lang) {
-//         salary = s;
-//     }
-//     void showProgrammer() {
-//         cout << "Programmer ID: " << id
-//              << ", Language: " << language
-//              << ", Salary: " << salary << endl;
-//     }
-// };
+class Programmer : public Employee, public Coder {
+public:
+    float salary;
+    Programmer(int i, string lang, float s) : Employee(i), Coder(lang) {
+        salary = s;
+    }
+    void showProgrammer() {
+        cout << "Programmer ID: " << id
+             << ", Language: " << language
+             << ", Salary: " << salary << endl;
+    }
+};
 
-// int main() {
-//     Programmer p1(101, "C++", 60000);
-//     p1.showEmployee();   // from Employee
-//     p1.showCoder();      // from Coder
-//     p1.showProgrammer(); // from Programmer
-//     return 0;
-// }
+int main() {
+    Programmer p1(101, "C++", 60000);
+    p1.showEmployee();   // from Employee
+    p1.showCoder();      // from Coder
+    p1.showProgrammer(); // from Programmer
+    return 0;
+}
 
 
 
