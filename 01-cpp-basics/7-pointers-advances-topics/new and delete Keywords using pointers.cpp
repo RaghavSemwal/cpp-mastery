@@ -85,3 +85,43 @@ int main() {
 
     return 0;
 }
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+
+//     // ---------------- BASIC POINTER EXAMPLE ----------------
+//     int a = 4;
+//     int* ptr = &a;   // ptr stores address of a (stack memory)
+//     cout << "The value of a is " << *(ptr) << endl;  // dereferencing pointer
+
+
+//     // ---------------- USING new KEYWORD ----------------
+//     // 'new' allocates memory on HEAP and returns a pointer
+
+//     // int *p = new int(40);   // dynamic int with initialization
+//     float *p = new float(40.78);  // dynamic float with initialization
+//     cout << "The value at address p is " << *(p) << endl;
+
+//     delete p;   // free heap memory (prevents memory leak)
+//     p = nullptr; // avoid dangling pointer
+
+
+//     // ---------------- DYNAMIC ARRAY USING new[] ----------------
+//     int *arr = new int[3];   // dynamic array of size 3 (heap memory)
+
+//     // storing values
+//     arr[0] = 10;
+//     arr[1] = 20;
+//     arr[2] = 30;
+
+//     cout << "Dynamic array values: ";
+//     cout << arr[0] << " " << arr[1] << " " << arr[2] << endl;
+
+//     delete[] arr;   // delete[] is required for arrays
+//     arr = nullptr;  // avoid dangling pointer
+
+//     return 0;
+// }
