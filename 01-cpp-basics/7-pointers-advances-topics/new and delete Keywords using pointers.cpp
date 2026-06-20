@@ -137,7 +137,7 @@ int main() {
 
                                      // NO
     /*
- WHY DO WE NEED DYNAMIC MEMORY (new/delete) IN C++?
+ !WHY DO WE NEED DYNAMIC MEMORY (new/delete) IN C++?
 
 1. Static (manual) memory has fixed size
    - When we write: int arr[10];

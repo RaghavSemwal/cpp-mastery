@@ -91,3 +91,9 @@ int main() {
 
     return 0;
 }
+
+/*
+TODO:   ⭐ One‑Line Definition
+ ?     A pointer to an object stores the object’s address, and the arrow operator (→) is used to access its members 
+ ?     because the pointer is not an object itself.
+*/
