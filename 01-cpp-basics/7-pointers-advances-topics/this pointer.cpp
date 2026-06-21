@@ -45,7 +45,7 @@ public:
     // Returning current object using 'this'
     Demo& increment() {
         this->x++;
-        return *this;   // return current object
+       return *this;   // return current object
     }
 };
 
