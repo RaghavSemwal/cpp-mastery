@@ -61,7 +61,7 @@ int main() {
     bptr->showBase();   // ✅ allowed (base member)
     // bptr->showDerived(); ❌ not allowed (not in base)
 
-    bptr->display();    // ✅ calls Derived version (runtime polymorphism) by virtual
+    bptr->display();    // ✅ calls Derived version (runtime polymorphism) by virtual keyword
 
     // Derived class pointer
     Derived *dptr = &d;
