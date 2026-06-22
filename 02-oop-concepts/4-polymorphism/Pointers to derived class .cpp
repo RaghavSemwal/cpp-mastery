@@ -47,7 +47,7 @@ public:
         cout << "Derived class function\n";
     }
 
-    void display() override {  // overrides base version
+    void display() override{  // overrides base version
         cout << "Display from Derived\n";
     }
 };
@@ -61,7 +61,7 @@ int main() {
     bptr->showBase();   // ✅ allowed (base member)
     // bptr->showDerived(); ❌ not allowed (not in base)
 
-    bptr->display();    // ✅ calls Derived version (runtime polymorphism)
+    bptr->display();    // ✅ calls Derived version (runtime polymorphism) by virtual
 
     // Derived class pointer
     Derived *dptr = &d;
