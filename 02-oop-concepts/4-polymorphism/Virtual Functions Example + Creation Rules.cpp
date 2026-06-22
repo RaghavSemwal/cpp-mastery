@@ -78,3 +78,9 @@ int main() {
 
     return 0;
 }
+
+
+/*
+TODO:⭐ One‑Line Definition
+Pointers to base classes combined with virtual functions allow runtime polymorphism,
+ where the correct derived class function is executed depending on the object being pointed to.*/
