@@ -71,7 +71,8 @@ eof() returns true when the file pointer has reached the end of the file.
 So while (!in.eof()) means “keep looping until end of file is reached.”
 
 ⭐ The Problem
-Using while (!in.eof()) can lead to reading one extra empty line or processing invalid data, because eof() only becomes true after a failed read attempt.
+Using while (!in.eof()) can lead to reading one extra empty line or processing invalid data,
+ because eof() only becomes true after a failed read attempt.
 So you often end up with an extra iteration.
 
 
