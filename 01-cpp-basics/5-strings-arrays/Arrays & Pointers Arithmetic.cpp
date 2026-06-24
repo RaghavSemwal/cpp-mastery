@@ -13,7 +13,7 @@ int main() {
 
     cout << "Array elements using pointer arithmetic: ";
     for (int i = 0; i < 5; i++) {
-        cout << *(p + i) << " "; // dereference with offset
+        cout << *(p + i) << " "; // dereference with  offset
     }
     cout << endl;
 
