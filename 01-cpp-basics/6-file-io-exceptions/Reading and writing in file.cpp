@@ -53,5 +53,4 @@ You can use ios::in, ios::out, ios::app, ios::binary with open() for more contro
 
 ⭐ One‑Line Definition
 File I/O in C++ lets you read and write data using ifstream, ofstream, and fstream, with files opened
- either via constructors or the open() member function.
- */
+ either via constructors or the open() member function.*/
