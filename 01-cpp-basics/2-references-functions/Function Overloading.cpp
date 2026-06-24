@@ -1,25 +1,25 @@
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-// Overloaded functions
-int add(int a, int b) {
-    return a + b;
-}
+// // Overloaded functions
+// int add(int a, int b) {
+//     return a + b;
+// }
 
-double add(double a, double b) {
-    return a + b;
-}
+// double add(double a, double b) {
+//     return a + b;
+// }
 
-int add(int a, int b, int c) {
-    return a + b + c;
-}
+// int add(int a, int b, int c) {
+//     return a + b + c;
+// }
 
-int main() {
-    cout << "Add two ints: " << add(5, 10) << endl;
-    cout << "Add two doubles: " << add(3.5, 2.5) << endl;
-    cout << "Add three ints: " << add(1, 2, 3) << endl;
-    return 0;
-}
+// int main() {
+//     cout << "Add two ints: " << add(5, 10) << endl;
+//     cout << "Add two doubles: " << add(3.5, 2.5) << endl;
+//     cout << "Add three ints: " << add(1, 2, 3) << endl;
+//     return 0;
+// }
 
 
 
@@ -36,7 +36,7 @@ double volume(double radius, double height) {
     return 3.14159 * radius * radius * height;
 }
 
-// Volume of Sphere
+// Volume of  Sphere
 double volume(double radius, char type) {
     // 'type' parameter just distinguishes this overload
     return (4.0 / 3.0) * 3.14159 * radius * radius * radius;
