@@ -43,7 +43,7 @@ int main() {
     std::cout << "Game Title: " << game1.title << std::endl;
     std::cout << "Release Year: " << game1.releaseYear << std::endl;
 
-    return 0;
+    return 0 ;
 }
 
 
