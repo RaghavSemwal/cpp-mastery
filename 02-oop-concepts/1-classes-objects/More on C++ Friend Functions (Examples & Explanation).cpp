@@ -70,7 +70,7 @@ class  Y {
         void display(){
             cout << "Second Number: " << second_num << endl;
         }
-        friend void swap(X&, Y&);  // declaring friend function
+        friend void swap(X&, Y&);   // declaring friend function
 };
 
 void swap(X& x, Y& y){  // defining friend function
@@ -91,7 +91,7 @@ int main()
     O1.display();
     O2.display();
 
-    swap(O1, O2);  // calling friend function
+    swap(O1, O2);  // calling  friend function
 
     cout << "After Swapping: " << endl;
     O1.display();
