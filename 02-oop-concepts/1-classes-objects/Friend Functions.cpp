@@ -72,4 +72,4 @@ Defined outside class without scope resolution
 
 Can access private and protected members
 
-Called like a normal function, not with object*/
+Called like a normal function; not with object*/
