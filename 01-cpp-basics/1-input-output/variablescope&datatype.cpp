@@ -42,7 +42,7 @@ void display() {
 
 int main() {
     int globalVar = 50; // local variable shadows global
-    globalVar = 200;    // ✅ update local variable instead of redeclaring
+    globalVar = 200;    // ✅ update local variable instead of  redeclaring
     display();          // prints globalVar = 100
     cout << "Inside main function, globalVar = " << globalVar << endl; // prints 200
     return 0;
