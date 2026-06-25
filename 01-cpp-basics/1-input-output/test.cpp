@@ -6,7 +6,10 @@ int main() {
     cout << "Test Code Running Successfully!" << endl;
 
     // Simple arithmetic test
-    int a = 10, b = 5;
+    int a ,b;
+    cout<<"enter two numbers:"<<endl;
+    cin>>a;
+    cin>>b;
     cout << "a = " << a << ", b = " << b << endl;
     cout << "a + b = " << (a + b) << endl;
     cout << "a - b = " << (a - b) << endl;
