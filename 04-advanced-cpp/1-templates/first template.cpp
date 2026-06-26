@@ -60,3 +60,16 @@ int main() {
     cout << "Dot product = " << v1.dotproduct(v2) << endl;
     return 0;
 }
+
+/*5. Key Points
+Templates must be defined in header files (or same .cpp) so compiler can instantiate them.
+
+Use template<class T> or template<typename T> (both are valid).
+
+Compiler generates code when template is instantiated with a type.
+
+Saves time, avoids code duplication.
+
+⭐ One‑Line Definition
+A C++ template is a blueprint for writing generic functions or classes that work with any data type, 
+enabling code reusability and type safety.*/
