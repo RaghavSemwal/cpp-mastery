@@ -28,25 +28,22 @@ shrink_to_fit() → release unused memory*/
 #include <vector>
 using namespace std;
 
+int main() {
+    vector<int> v1;              // empty vector
+    vector<int> v2(3, 5);        // 3 elements, all 5
+    vector<int> v3 = {1, 2, 3};  // initializer list
 
-int main(){
-     vector<int> v1;
-     vector<int> v2(3,5);
-     vector<int> v3={1,2,3};
+    v1.push_back(10);
+    v1.push_back(20);
 
-     v1.push_back(10);
-     v1.push_back(20);
+    cout << "v1 size: " << v1.size() << endl;
+    cout << "v2 elements: ";
+    for (int x : v2) cout << x << " ";
+    cout << endl;
 
-     cout<<"size of of v1:"<<v1.size()<<endl;
-     cout<<"v2 element :";
-
-     for(int i=0;i<3;i++){
-         cout <<v2[i]<< " "<<endl;
-        
-     }
-
-     cout<<"element at index 1 in v3 :"<<v3.at(1)<<endl;
-     return 0;
+    cout << "Element at index 1 in v3: " << v3.at(1) << endl;
+    return 0;
 }
+
 
 
