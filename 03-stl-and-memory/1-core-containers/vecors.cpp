@@ -24,26 +24,90 @@ shrink_to_fit() → release unused memory*/
 
 
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> v1;              // empty vector
+//     vector<int> v2(3, 5);        // 3 elements, all 5
+//     vector<int> v3 = {1, 2, 3};  // initializer list
+
+//     v1.push_back(10);
+//     v1.push_back(20);
+
+//     cout << "v1 size: " << v1.size() << endl;
+//     cout << "v2 elements: ";
+//     for (int x : v2) cout << x << " ";
+//     cout << endl;
+
+//     cout << "Element at index 1 in v3: " << v3.at(1) << endl;
+//     return 0;
+// }
+
+/*
+!⭐ Best Practices
+
+Use reserve() if you know the number of elements in advance → avoids costly reallocations.
+
+Prefer at() for safe access (throws exception if out of range).
+
+Use shrink_to_fit() to free unused memory when vector shrinks.
+
+For frequent insertions/removals in the middle, consider std::list instead.
+
+⭐ One‑Line Exam Definition
+In C++ STL, std::vector is a sequence container that represents a dynamic array, offering fast random access, 
+efficient insertion/removal at the end, and automatic memory management.
+*/
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int main() {
-    vector<int> v1;              // empty vector
-    vector<int> v2(3, 5);        // 3 elements, all 5
-    vector<int> v3 = {1, 2, 3};  // initializer list
+int main(){
+    vector <int> v;
+    
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
 
-    v1.push_back(10);
-    v1.push_back(20);
+    cout<<"vector elements: ";
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
 
-    cout << "v1 size: " << v1.size() << endl;
-    cout << "v2 elements: ";
-    for (int x : v2) cout << x << " ";
-    cout << endl;
 
-    cout << "Element at index 1 in v3: " << v3.at(1) << endl;
-    return 0;
+cout<<"first element: "<<v.front()<<endl;
+
+cout<<"last element: "<<v.back()<<endl;
+
+cout << "Element at index 1: " << v.at(1) << endl;
+
+v.insert(v.begin()+1,15);
+cout << "After insertion: ";
+ 
+for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+ cout<<endl;
+   
+ v.pop_back();
+ cout << "After pop_back: ";
+ for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+   
+       cout<<endl;
+
+    v.erase(v.begin());
+     cout << "After erase: ";
+     for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+    
+    cout<<endl;
+     cout << "Size = " << v.size() << endl;
+    cout << "Capacity = " << v.capacity() << endl;
 }
-
-
-
