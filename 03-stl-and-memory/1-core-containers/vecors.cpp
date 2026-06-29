@@ -114,3 +114,19 @@ int main() {
 
     return 0;
 }
+
+
+/*
+?⭐ Key Takeaways
+push_back() → adds element at end.
+
+insert() → adds element at specific position.
+
+pop_back() → removes last element.
+
+erase() → removes element at given position.
+
+front(), back(), at() → access elements safely.
+
+size() vs capacity() → size = current elements, capacity = allocated memory.
+*/
