@@ -63,24 +63,62 @@ Writing another template with different parameters
 
 The compiler chooses the best match.*/
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-// Template function
+// // Template function
+// template <class T>
+// void display(T x) {
+//     cout << "Template display: " << x << endl;
+// }
+
+// // Normal overloaded function
+// void display(int x) {
+//     cout << "Normal display (int): " << x << endl;
+// }
+
+// int main() {
+//     display(10);       // calls normal function (best match)
+//     display(3.14);     // calls template
+//     display('A');      // calls template
+
+//     return 0;
+// }
+
+
+
+// ⭐ Why This Happens?
+// For display(10) → exact match exists → normal function wins.
+
+// For display(3.14) → no float version → template wins.
+
+// For display('A') → no char version → template wins.
+
+
+//!⭐ 3. Overloading Multiple Template Functions
+//! You can overload templates themselves:
+
 template <class T>
-void display(T x) {
-    cout << "Template display: " << x << endl;
+void print(T x) {
+    cout << "One parameter: " << x << endl;
 }
 
-// Normal overloaded function
-void display(int x) {
-    cout << "Normal display (int): " << x << endl;
+template <class T1, class T2>
+void print(T1 a, T2 b) {
+    cout << "Two parameters: " << a << ", " << b << endl;
 }
 
 int main() {
-    display(10);       // calls normal function (best match)
-    display(3.14);     // calls template
-    display('A');      // calls template
-
-    return 0;
+    print(5);
+    print(3.14, 'A');
 }
+
+/*
+!⭐ One‑Line Exam Definitions
+✔ Member Function Template
+A member function template is a template defined inside a non‑template class, allowing that 
+function to operate on multiple data types.
+
+✔ Overloading Template Functions
+Overloading template functions means defining multiple functions (normal or template) with the same name,
+ and the compiler selects the best match based on arguments.*/
