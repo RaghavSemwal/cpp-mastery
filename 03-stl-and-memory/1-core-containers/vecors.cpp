@@ -61,53 +61,56 @@ In C++ STL, std::vector is a sequence container that represents a dynamic array,
 efficient insertion/removal at the end, and automatic memory management.
 */
 
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int main(){
-    vector <int> v;
-    
+int main() {
+    // 1. Create an empty vector of integers
+    vector<int> v;
+
+    // 2. Add elements using push_back
     v.push_back(10);
     v.push_back(20);
     v.push_back(30);
 
-    cout<<"vector elements: ";
-    for(int i=0;i<v.size();i++){
-        cout<<v[i]<<" ";
+    // 3. Display elements using range-based for loop
+    cout << "Vector elements: ";
+    for (int x : v) {
+        cout << x << " ";
     }
-    cout<<endl;
+    cout << endl;
 
+    // 4. Access elements
+    cout << "First element: " << v.front() << endl;
+    cout << "Last element: " << v.back() << endl;
+    cout << "Element at index 1: " << v.at(1) << endl;
 
-cout<<"first element: "<<v.front()<<endl;
+    // 5. Insert element at position
+    v.insert(v.begin() + 1, 15); // insert 15 at index 1
 
-cout<<"last element: "<<v.back()<<endl;
+    cout << "After insertion: ";
+    for (int x : v) cout << x << " ";
+    cout << endl;
 
-cout << "Element at index 1: " << v.at(1) << endl;
+    // 6. Remove last element
+    v.pop_back();
 
-v.insert(v.begin()+1,15);
-cout << "After insertion: ";
- 
-for(int i=0;i<v.size();i++){
-        cout<<v[i]<<" ";
-    }
- cout<<endl;
-   
- v.pop_back();
- cout << "After pop_back: ";
- for(int i=0;i<v.size();i++){
-        cout<<v[i]<<" ";
-    }
-   
-       cout<<endl;
+    cout << "After pop_back: ";
+    for (int x : v) cout << x << " ";
+    cout << endl;
 
-    v.erase(v.begin());
-     cout << "After erase: ";
-     for(int i=0;i<v.size();i++){
-        cout<<v[i]<<" ";
-    }
-    
-    cout<<endl;
-     cout << "Size = " << v.size() << endl;
+    // 7. Erase element at position
+    v.erase(v.begin()); // remove first element
+
+    cout << "After erase: ";
+    for (int x : v) cout << x << " ";
+    cout << endl;
+
+    // 8. Size and capacity
+    cout << "Size = " << v.size() << endl;
     cout << "Capacity = " << v.capacity() << endl;
+
+    return 0;
 }
