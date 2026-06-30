@@ -69,11 +69,13 @@ int main() {
     // Using built-in STL functor
     // -------------------------------
     cout << "Vector before sorting: ";
-    for (int i=0;i<v.size();i++){
+     
+    for (int i=0; i<v.size(); i++){
 
      cout<<v.at(i)<<" ";
    }
- cout<<"\n";
+     cout<<"\n"; 
+
     // Sort in descending order using built-in functor greater<int>()
     sort(v.begin(), v.end(), greater<int>());
 
@@ -83,3 +85,28 @@ int main() {
 
     return 0;
 }
+
+/*
+⭐ Explanation of Code
+Custom Functor (Square)
+
+Defines operator() to calculate square of a number.
+
+Object sq can be used like a function: sq(4) → returns 16.
+
+Predicate Functor (GreaterThanFive)
+
+Returns true if the number is greater than 5.
+
+Used with find_if() to locate the first element satisfying the condition.
+
+Built-in Functor (greater<int>)
+
+Provided in <functional>.
+
+Used with sort() to arrange elements in descending order.
+
+
+⭐ One‑Line Exam Definition
+A Functor (Function Object) in C++ STL is an object that overloads operator() to behave
+ like a function, often used in algorithms and containers for custom operations, comparisons, or predicates.*/
