@@ -93,9 +93,7 @@ int main() {
     // -------------------------------
     // 5. Reverse list1
     // -------------------------------
-    list1.reverse();
-    cout << "List1 after reversing: ";
-    display(list1);
+   
 
     return 0;
 }
