@@ -1,27 +1,31 @@
 #include <iostream>
-
-// 1. Comment out or remove the broken standard thread header
-// #include <thread> 
-
-// 2. Include the workaround header using quotes "" because it's in your local directory
+// Normally you would include <thread>, but on some MinGW setups
+// the standard <thread> header is broken. So you’re using a workaround:
 #include "mingw.thread.h" 
 
 using namespace std;
 
-void myfunc(){
-   cout << "so,we are there yet ?" << endl;
+// A simple function to run in a separate thread
+void myfunc() {
+    cout << "So, are we there yet?" << endl;
 }
 
-int main(){
-    // 3. Explicitly use std::thread (mingw.thread.h injects it into the std namespace)
+int main() {
+    // Create a thread object t1 that runs myfunc()
     std::thread t1(myfunc);
-   // t1.join();
+
+    // Option 1: join() → main waits until t1 finishes
+    // t1.join();
+
+    // Option 2: detach() → t1 runs independently, main doesn’t wait
     t1.detach();
 
-    if(t1.joinable()){
-         t1.join();
-          cout << "thread is joinable" << endl;
+    // Check if thread is still joinable
+    if (t1.joinable()) {
+        // If joinable, join it (synchronize with main)
+        t1.join();
+        cout << "Thread is joinable" << endl;
     }
-  
+
     return 0;
 }
